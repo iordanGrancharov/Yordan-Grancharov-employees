@@ -1,0 +1,21 @@
+.table {
+  border: 3px solid white;
+  width: 50%;
+  margin-top: 5vh;
+  transition: 0.3s linear;
+}
+
+.tableHeader {
+  border-bottom: 3px solid white;
+}
+
+.tableBody {
+  border-bottom: 3px solid white;
+}
+
+.tableBody tr td {
+  border: 3px solid white;
+  padding: 2px;
+  text-align: center;
+  color: white;
+}
