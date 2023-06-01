@@ -2,7 +2,6 @@ import { convertSecondsToDays } from "../../utils/prepareData";
 import styles from "./DisplayPair.module.css";
 
 function DisplayPair({ displayPair }) {
-  console.log(displayPair);
   return (
     <table className={styles["pairsTable"]}>
       <thead>

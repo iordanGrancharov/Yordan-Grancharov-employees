@@ -119,15 +119,25 @@ const sortDataByAscending = (data) => {
 };
 
 const findPairs = (data) => {
+  console.log(data);
   //data => projects
   const dataCopy = data.employees.slice();
-  const pairs = [];
 
+  const pairs = [];
   while (dataCopy.length > 1) {
     let current = dataCopy.shift();
+    // console.log(current);
     dataCopy.forEach((emp) => {
+      // console.log(emp);
       if (emp.from < current.to) {
-        const timeSpentTogetherOnProject = current.to - emp.from;
+        let timeSpentTogetherOnProject;
+        if (emp.to < current.to) {
+          timeSpentTogetherOnProject = emp.to - emp.from;
+        }
+
+        if (emp.to > current.to) {
+          timeSpentTogetherOnProject = current.to - emp.from;
+        }
         pairs.push([data.id, current, emp, timeSpentTogetherOnProject]);
       }
     });
